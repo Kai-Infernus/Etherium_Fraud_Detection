@@ -112,11 +112,14 @@ This model learns **patterns of fraud propagation** — how fraudulent nodes are
 
 ### 🧮 8. Evaluation & Comparison
 After training both approaches, performance was compared using:
-| Model | Accuracy | Recall (Fraud) | F1-Score |
-|--------|-----------|----------------|-----------|
-| Random Forest | 94% | 72% | 80% |
-| XGBoost | 93% | 74% | 82% |
-| GNN (GCN) | 91% | 86% | 88% |
+| **Model**             | **Accuracy** | **F1-Score** | **MCC** |
+| --------------------- | ------------ | ------------ | ------- |
+| Logistic Regression   | 0.89         | 0.77         | 0.71    |
+| Random Forest         | 0.97         | 0.94         | 0.92    |
+| XGBoost               | 0.98         | 0.96         | 0.94    |
+| PyTorch Geometric GCN | 0.96         | 0.96         | 0.86    |
+| DGL GCN               | 0.73         | 0.73         | 0.74    |
+
 
 **Observations:**
 - The GNN slightly lowered accuracy (due to more balanced classification)  
